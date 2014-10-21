@@ -1,0 +1,199 @@
+﻿#jbCallme_overlay{
+    background:#000;
+    opacity:0.4;
+    filter:alpha(opacity=80);
+    position:fixed;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    z-index:100;
+    display:none;
+}
+
+.jbCallme{
+    background:#f3f4f5;
+    -webkit-box-shadow: inset 0px 0px 18px rgba(100, 100, 100, 0.2), rgba(0,0,0,.8) 1px 1px 4px;
+    -moz-box-shadow:    inset 0px 0px 18px rgba(100, 100, 100, 0.2), rgba(0,0,0,.8) 1px 1px 4px;
+    box-shadow:         inset 0px 0px 18px rgba(100, 100, 100, 0.2), rgba(0,0,0,.8) 1px 1px 4px;
+    border: 1px solid #d6d6d6;
+    left:50%;
+    margin-left:-190px;
+    position:fixed;
+    top:50px;
+    width:380px;
+    z-index:110;
+    color:#323d53;
+    display:none;
+    height:auto;
+}
+.jbCallme .jb_title{
+    font-family: Helvetica, Arial, sans-serif;
+    color:#fff;
+    font-size:20px;
+    padding:10px;
+    background:#005092;
+}
+.jbCallme textarea{
+    border: 1px solid #d6d6d6;
+    padding: 3px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    width:98%;
+    height:70px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.jbCallme form{
+    margin: 10px;
+}
+.jbCallme .jb_input{
+    margin-top: 10px;
+}
+
+.jbCallme .jb_input span{
+    color: red;
+    padding-right: 3px;
+}
+
+.jbCallme  label   {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+    display: block;
+    margin-top: 12px;
+}
+/*TODO убрал margin и добавил сверху .jbCallme .jb_input span для звездочку*/
+.jbCallme input[type=text],.jbCallme input[type=email]{
+/*    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+*/
+    margin: 0;
+    border: 1px solid #CCCCCC;
+    padding: 7px;
+    background-color: #fff;
+    /*width:95%;*/
+    width: 92%;
+
+}
+.jbCallme select{
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    border: 1px solid #CCCCCC;
+    padding: 7px;
+    background-color: #fff;
+    width:100%;
+    display:block;
+
+}
+.jbCallme select:focus,.jbCallme input[type=text]:focus,.jbCallme input[type=email]:focus, .jbCallme textarea:focus{
+    background-color: #f9fbff;
+    border: 1px solid #999999;
+}
+.jbCallme .jb_close{
+    position:absolute;
+    display:block;
+    top:3px;
+    right:3px;
+    width:24px;
+    height:24px;
+    cursor:pointer;
+    text-indent:-500px;
+    overflow:hidden;
+}
+.jbCallme .jb_close:after{
+    display:block;
+    content:'x';
+	font-family: Arial, sans-serif;
+    position:absolute;
+    line-height:24px;
+    font-size:24px;
+    text-indent:0;
+    top:0;
+    right:0;
+    color:#fff;
+}
+.jbCallme input[type=submit]{
+    margin:0;
+    border: 0 none;
+    display:inline-block;;
+    -moz-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+    box-shadow:inset 0px 1px 0px 0px #bee2f9;
+    background:-webkit-gradient(linear, left top, left bottom, from(#2976b6), to(#1d5483));
+    background:-moz-linear-gradient(linear, left top, left bottom, from(#2976b6), to(#1d5483));
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf');
+    /*background-color:#63b8ee;*/
+    text-indent:0;
+    border:1px solid #3866a3;
+    padding: 7px 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: #fff;
+    font-size: 13px;
+    line-height:14px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor:pointer;
+}
+.jbCallme input[type=submit]:hover {
+    border-top-color: #148ec7;
+    background: #1c7bd2;
+    color: #fff;
+}
+.jbCallme .jb_dev{
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    color:#c2c3c4;
+    text-decoration:none;
+}
+.jbCallme .jb_success{
+    margin:30px;
+    color:#323d53;
+    font-size:14px;
+}
+.jbCallme .jb_fail{
+    margin:30px;
+    color:#323d53;
+    font-size:14px;
+}
+.jb_progress{
+    display: inline-block;
+    height: 76px;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+}
+.jb_progress:after {
+	border-width: 0 3px 0 0;
+	border-style: solid;
+	border-color: rgba(0, 0, 0, .5);
+	border-radius: 50%;
+	display: block;
+	height: 50px;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	position: absolute;
+	top: 50%;
+	width: 50px;
+
+	content: "";
+
+	animation: spin 1s infinite linear;
+	-webkit-animation: spin 1s infinite linear;
+}
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(360deg); }
+}
